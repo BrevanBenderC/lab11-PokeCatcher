@@ -1,62 +1,68 @@
 import { pokemonArr } from './array1.js';
 import { pickPokemon, showPokemon } from './fun-functions.js';
 
-const pokemon1Img = document.getElementById('poke-1-img');
-const pokemon2Img = document.getElementById('poke-2-img');
-const pokemon1Radio = document.getElementById('pokemon-1-radio');
-const pokemon2Radio = document.getElementById('pokemon-2-radio');
-const pokemon3Radio = document.getElementById('pokemon-3-radio');
-const pokemon3Img = document.getElementById('poke-3-img');
+const captureButton = document.getElementById('choose');
+const pokeImg1 = document.getElementById('poke-1-img');
+const pokeImg2 = document.getElementById('poke-2-img');
+const pokeImg3 = document.getElementById('poke-3-img');
+const pokeRadio1 = document.getElementById('pokemon-1-radio');
+const pokeRadio2 = document.getElementById('pokemon-2-radio');
+const pokeRadio3 = document.getElementById('pokemon-3-radio');
+const countSpan = document.getElementById('allencounter');
 
-const button = document.getElementById('choose');
 
-const generatePokemon = () =>{
-    let randNum1 = Math.floor(Math.random() * pokemonArr.length);
-    let randNum2 = Math.floor(Math.random() * pokemonArr.length);
-    let randNum3 = Math.floor(Math.random() * pokemonArr.length);
+// create generatePokemon()
+const generatePokemon = () => {
+  // generate 3 random pokemon using math.floor(math.random() * pokemon.length)
+    // generate 3 random from pokemon array on pokemon.js, set it equal to mutable variable
+    let randPoke1 = Math.floor(Math.random() * pokemonArr.length);
+    let randPoke2 = Math.floor(Math.random() * pokemonArr.length);
+    let randPoke3 = Math.floor(Math.random() * pokemonArr.length);
+  // regenerate the number of any of them match
     while (
-        randNum1 === randNum2 || 
-      randNum1 === randNum3 || 
-      randNum2 === randNum3
+        randPoke1 === randPoke2 || randPoke2 === randPoke3 ||
+      randPoke1 === randPoke3
     ) {
-        randNum1 = Math.floor(Math.random() * pokemonArr.length);
-        randNum2 = Math.floor(Math.random() * pokemonArr.length);
-        randNum3 = Math.floor(Math.random() * pokemonArr.length);
+      // continue to regenerate random numbers to generate randPoke to encounter 
+        randPoke1 = Math.floor(Math.random() * pokemonArr.length);
+        randPoke2 = Math.floor(Math.random() * pokemonArr.length);
+        randPoke3 = Math.floor(Math.random() * pokemonArr.length); 
     }
-    
-    let pokemon1 = pokemonArr[randNum1];
-    showPokemon(pokemon1.pokemon);
-    pokemon1Img.src = `${pokemon1.image}`;
-    pokemon1Radio.value = pokemon1.pokemon;
-    
-    let pokemon2 = pokemonArr[randNum2];
-    showPokemon(pokemon2.pokemon);
-    pokemon2Img.src = `${pokemon2.image}`;
-    pokemon2Radio.value = pokemon2.pokemon;
 
-    let pokemon3 = pokemonArr[randNum3];
-    showPokemon(pokemon2.pokemon);
-    pokemon3Img.src = `${pokemon3.image}`;
-    pokemon3Radio.value = pokemon3.pokemon;
+    let poke1 = pokemonArr[randPoke1];
+    showPokemon(poke1.id);
+    pokeImg1.src = poke1.url_image;
+    pokeRadio1.value = poke1.id;
 
+    let poke2 = pokemonArr[randPoke2];
+    showPokemon(poke2.id);
+    pokeImg2.src = poke2.url_image;
+    pokeRadio2.value = poke2.id;
+
+    let poke3 = pokemonArr[randPoke3];
+    showPokemon(poke3.id);
+    pokeImg3.src = poke3.url_image;
+    pokeRadio3.value = poke3.id;
 };
 
-let totalPlays = 0;
-generatePokemon();
 
-button.addEventListener('click', ()=>{
-    const chosenRadio = document.querySelector('input[type=radio]:checked');
- 
-    if (chosenRadio){
-        const chosenId = chosenRadio.value;
-        console.log(chosenId);
-        totalPlays++;
+let totalEncounters = 0;
+showPokemon();
+
+captureButton.addEventListener('click', ()=>{ 
+    const chosenPokemon = document.querySelector('input[type=radio]:checked');
+    
+    if (chosenPokemon){
+        const chosenId = Number(chosenPokemon.value);
         pickPokemon(chosenId);
-        if (totalPlays >= 2){
-            window.location = './results/index.html';
-        } else {
+
+        totalEncounters++;
+        if (totalEncounters >= 10){
+            window.location.href = './results/index.html';
+        }
+        else {
             generatePokemon();
         }
     }
-
+    countSpan.textContent = totalEncounters;
 });

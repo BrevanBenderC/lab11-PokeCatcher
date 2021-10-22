@@ -1,4 +1,4 @@
-//import { pokemonArr } from '../array1.js';
+import { pokemonArr } from '../array1.js';
 import { getResults, findById } from '../JSONFunctions.js';
 //console.log(pokemonArr);
 const results = getResults();
@@ -16,7 +16,7 @@ for (let item of results){
     
    // const img = document.createElement('img');
     
-    //img.src = pokemonZ.image;
+    img.src = pokemonZ.image;
     
     const header = document.createElement('h3');
     

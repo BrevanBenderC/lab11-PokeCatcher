@@ -1,4 +1,4 @@
-export function findById(items, id){
+export function findById(id, items){
     for (const item of items){
         if (item.id === id) {
             return item;
@@ -23,13 +23,14 @@ export function showPokemon(id){
         const newItem = { id: id, shown: 1, picked: 0 };
         results.push(newItem);
     }
-    localStorage.setItem('RESULTS', JSON.stringify(results));
+    const stringPokedex = JSON.stringify(results);
+    localStorage.setItem('RESULTS', stringPokedex);
 }
 
 export function pickPokemon(id){
     
     let results = getResults(); 
-    let item = findById(results, id);
-    item.picked++;
+    let pokePick = findById(id, results);
+    pokePick.picked++;
     localStorage.setItem('RESULTS', JSON.stringify(results));
 }
