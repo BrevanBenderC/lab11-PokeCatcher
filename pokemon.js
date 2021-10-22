@@ -1,4 +1,4 @@
-export const pokemonArr = [
+export default [
     {
         '_id':'5cef3501ef6005a77cd4fd17',
         'pokemon':'bulbasaur',

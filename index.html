@@ -5,45 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Catch The Pokemon!</title>
+    <title>Home Page</title>
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
+    <section id="main-container">
+        <div id="pokemon-logo-div">
+            <h1 id="title">Wild Pokemon Have appeared</h1>
         </div>
-    </header>
-    <main>
-        <section class="main-section">
-            <h2>Wild Pokemon Appeared!</h2>
-            <div class="pokes">
-                <label class="pokeAppear">
-                    <input name="pokemon" type="radio" id="pokemon-1-radio">
-                    <img id="poke-1-img">
-                </label>
-                <label class="pokeAppear">
-                    <input name="pokemon" type="radio" id="pokemon-2-radio">
-                    <img id="poke-2-img">
-                </label>
-                <label class="pokeAppear">
-                    <input name="pokemon" type="radio" id="pokemon-3-radio">
-                    <img id="poke-3-img">
-                </label>
-            </div>
-            <button id="choose">Throw a PokeBall!</button>
-            <p>Pokemon Encountered: <span id="allencounter">0</span></p>
-    <footer>
-        <div class="copy gutter-right"> 2020 Alchemy Code Lab</div>
-    </footer>
+        <div class="user-options">
+            <label class="poke-choice">
+                <input type="radio" name="pokemon" id="pokemon-1">
+                <img id="poke-img-1"src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
+            </label>
 
+            <label class="poke-choice">
+                <input type="radio" name="pokemon" id="pokemon-2">
+                <img id="poke-img-2" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png">
+            </label>
+
+            <label class="poke-choice">
+                <input type="radio" name="pokemon" id="pokemon-3">
+                <img id="poke-img-3" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png">
+            </label>
+        </div>
+    </section>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <div id="page-Bottom">
+        <button id="capture-button">Capture</button>
+        <p id="bottomP">Pokemon Encountered: <span id="total-encounters">0</span></p>
+    </div>
+    <div id="total-encounter-div">
+        
+    </div>
     <script type="module" src="./app.js"></script>
 </body>
 
 </html>
+
