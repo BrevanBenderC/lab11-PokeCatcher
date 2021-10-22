@@ -1,49 +1,51 @@
-import { pokemonArr } from '../array1.js';
-import { getResults, findById } from '../JSONFunctions.js';
-//console.log(pokemonArr);
-const results = getResults();
+import pokemons from '../pokemon.js';
+import { getPokedex, findById } from '../storage-utils.js';
+//grab DOM elements
+const newJourney = document.getElementById('new-journey');
+const mainPage = document.getElementById('main-page');
+const catchMore = document.getElementById('catch-page-button');
 
-const main = document.getElementById('main');
+//create buttons with event listeners
+catchMore.addEventListener('click', ()=>{
+    window.location.href = '../';
+});
 
-for (let item of results){
-    const pokemonZ = findById(results, item.id);
+newJourney.addEventListener('click', ()=>{
+    localStorage.removeItem('POKEDEX');
+    window.location.href = '../';
+});
+
+// create loop
+const pokedex = getPokedex();
+for (let item of pokedex){
+    const caughtPokemon = findById(item.id, pokemons);
     
-    console.log(pokemonZ);
-    
-    const container = document.createElement('div');
-   
-    container.classList.add('results-container');
-    
-   // const img = document.createElement('img');
-    
-    img.src = pokemonZ.image;
-    
+    const mainContainer = document.createElement('div');
+    mainContainer.classList.add('main-container');
+
+    const img = document.createElement('img');
+    img.src = caughtPokemon.url_image;
+
     const header = document.createElement('h3');
-    
-    header.textContent = pokemonZ.pokemon;
-    
+    header.textContent = caughtPokemon.pokemon;
+
     const div = document.createElement('div');
-    
-    div.classList.add('results-body');
-    
+    div.classList.add('results-container');
+
     const p = document.createElement('p');
-    
+
     const resultsSpan1 = document.createElement('span');
-    
-    resultsSpan1.textContent = `Encountered: ${item.shown} `;
-    
+    resultsSpan1.textContent = `Encountered: ${item.encountered}`;
+
     const resultsSpan2 = document.createElement('span');
-   
-    resultsSpan2.textContent = `Caught: ${item.picked}`;
-    
+    resultsSpan2.textContent = `Caught: ${item.caught} `;
+
     p.append(resultsSpan1, resultsSpan2);
-    
-    p.classList.add('results-text');
-    
-    div.append(img, p);
-    
-    container.append(header, div);
-    
-    main.append(container);
+    p.classList.add('results-content');
+
+    div.append(header, img, p);
+
+    mainContainer.append(div);
+    mainPage.append(mainContainer);
 }
 

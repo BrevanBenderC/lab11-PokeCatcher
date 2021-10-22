@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/home.css">
-    
-    <title>Results</title>
+    <link rel="stylesheet" href="../styles/results.css">
+    <link rel="stylesheet" href="../styles/results.css"
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="gutter-left">
-            <a href="../">Home</a>
-        </nav>
-        <div class="gutter-right logo">
-            <img src="https://th.bing.com/th/id/R.09a6ae937a6d9ef5cd10d132b59d6f5d?rik=GjGGobNj1CECug&riu=http%3a%2f%2fpngimg.com%2fuploads%2fpokeball%2fpokeball_PNG19.png&ehk=HHxZdjmeaLfSg1nZR1X7lVbqXTozQEFDdPF6o0xOlCI%3d&risl=&pid=ImgRaw&r=0" />
-        </div>
-    </header>
+    
     <main>
-        <section class="main-section" id="main">
+        <h1>Pokedex</h1>
+        <section id="main-page">
         </section>
-        <section class="chart">
-            <canvas id="resultsChart" width="400" height="400"></canvas>
+        <section>
+            <button id="catch-page-button">Catch More</button>
+        </section>
+        <section>
+            <button id="new-journey">New Journey</button>
+        </section>
+        <section class="chart-container">
+            <canvas id="results-chart" width="600" height="600"></canvas>
         </section>
     </main>
-    <script src="./results.js" type="module"></script>
+    <script type="module" src="./results.js"></script>
 </body>
+</html>
