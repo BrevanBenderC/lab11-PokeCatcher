@@ -1,4 +1,4 @@
-import { getResults, pickPokemon, showPokemon } from '../storage-utils.js';
+import { getResults, pickPokemon, showPokemon } from '../JSONFunctions.js';
 
 const test = QUnit.test;
 

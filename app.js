@@ -51,8 +51,8 @@ button.addEventListener('click', ()=>{
         const chosenId = chosenRadio.value;
         totalPlays++;
         pickPokemon(chosenId);
-        if (totalPlays >= 10){
-            window.location = './results';
+        if (totalPlays >= 2){
+            window.location = './results/index.html';
         } else {
             generatePokemon();
         }

@@ -26,10 +26,10 @@ export function showPokemon(id){
     localStorage.setItem('RESULTS', JSON.stringify(results));
 }
 
-export function pickPokemon(){
+export function pickPokemon(id){
+    
     let results = getResults(); 
     let item = findById(results, id);
-    console.log(item);
     item.picked++;
     localStorage.setItem('RESULTS', JSON.stringify(results));
 }
