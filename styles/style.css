@@ -69,7 +69,7 @@
 .user-options img {
     width: 300px;
     height: 300px;
-    background-color: white;
+    background-color: black;
 }
 
 input[type=radio]{
@@ -80,6 +80,9 @@ input[type=radio]:checked + img {
     border: 8px solid black;
     padding: 50px;
     border-radius: 50%;
+    background-image: url('https://th.bing.com/th/id/OIP.g9axD3al0AQXiIr98FOtGgHaHa?pid=ImgDet&rs=1');
+    background-position: center;
+    background-size: 400px;
 }
 
 input[type=radio] + img {
