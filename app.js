@@ -27,17 +27,17 @@ const generatePokemon = () =>{
     let pokemon1 = pokemonArr[randNum1];
     showPokemon(pokemon1.pokemon);
     pokemon1Img.src = `${pokemon1.image}`;
-    pokemon1Radio.value = pokemon1.id;
+    pokemon1Radio.value = pokemon1.pokemon;
     
     let pokemon2 = pokemonArr[randNum2];
     showPokemon(pokemon2.pokemon);
     pokemon2Img.src = `${pokemon2.image}`;
-    pokemon2Radio.value = pokemon2.id;
+    pokemon2Radio.value = pokemon2.pokemon;
 
     let pokemon3 = pokemonArr[randNum3];
     showPokemon(pokemon2.pokemon);
     pokemon3Img.src = `${pokemon3.image}`;
-    pokemon3Radio.value = pokemon3.id;
+    pokemon3Radio.value = pokemon3.pokemon;
 
 };
 
@@ -49,6 +49,7 @@ button.addEventListener('click', ()=>{
  
     if (chosenRadio){
         const chosenId = chosenRadio.value;
+        console.log(chosenId);
         totalPlays++;
         pickPokemon(chosenId);
         if (totalPlays >= 2){

@@ -10,8 +10,6 @@ export function getResults(){
     const resultsString = localStorage.getItem('RESULTS') || '[]';  
     const results = JSON.parse(resultsString);
     return results;
-
-
 }
 
 export function showPokemon(id){
@@ -26,10 +24,11 @@ export function showPokemon(id){
     localStorage.setItem('RESULTS', JSON.stringify(results));
 }
 
-export function pickPokemon(){
+export function pickPokemon(id){
     let results = getResults(); 
-    let item = findById(results, id);
-    console.log(item);
-    item.picked++;
+    console.log(results);
+    let pick = findById(results, id);
+    console.log(pick);
+    pick.picked++;
     localStorage.setItem('RESULTS', JSON.stringify(results));
 }
