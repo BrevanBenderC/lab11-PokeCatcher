@@ -1,112 +1,112 @@
 const bulbasaur = 
     {
-        '_id':'5cef3501ef6005a77cd4fd17',
-        'pokemon':'bulbasaur',
-        'id':1,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png',
+       
+        pokemon:'bulbasaur',
+        id:'1',
+        image:'https://www.serebii.net/swordshield/pokemon/001.png',
        
     };
 const ivysaur =
     {
-        '_id':'5cef3501ef6005a77cd4fd19',
-        'pokemon':'ivysaur',
-        'id':2,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png',
+
+        pokemon:'ivysaur',
+        id:'2',
+        image:'https://www.serebii.net/swordshield/pokemon/002.png',
     }; 
 const charmander =
     {
-        '_id':'5cef3501ef6005a77cd4fd1a',
-        'pokemon':'charmander',
-        'id':5,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png',
+        
+        pokemon:'charmander',
+        id:'3',
+        image:'https://www.serebii.net/swordshield/pokemon/004.png',
     
     };
 const charmeleon =  
     {
-        '_id':'5cef3501ef6005a77cd4fd1b',
-        'pokemon':'charmeleon',
-        'id':6,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png',
+        
+        pokemon:'charmeleon',
+        id:'4',
+        image:'https://www.serebii.net/swordshield/pokemon/005.png',
     
     };
 const charizard =
     {
-        '_id':'5cef3501ef6005a77cd4fd1c',
-        'pokemon':'charizard',
-        'id':7,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png',
+        
+        pokemon:'charizard',
+        id:'5',
+        image:'https://www.serebii.net/swordshield/pokemon/006.png',
     };  
 const squirtle =
     {
-        '_id':'5cef3501ef6005a77cd4fd1f',
-        'pokemon':'squirtle',
-        'id':10,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png',
+        
+        pokemon:'squirtle',
+        id:'6',
+        image:'https://www.serebii.net/swordshield/pokemon/007.png',
    
     };
 const wartortle =
     {
-        '_id':'5cef3501ef6005a77cd4fd20',
-        'pokemon':'wartortle',
-        'id':11,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png',
+        
+        pokemon:'wartortle',
+        id:'7',
+        image:'https://www.serebii.net/swordshield/pokemon/008.png',
   
     };
 const blastoise =
     {
-        '_id':'5cef3501ef6005a77cd4fd21',
-        'pokemon':'blastoise',
-        'id':12,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png',
+        
+        pokemon:'blastoise',
+        id:'8',
+        image:'https://www.serebii.net/swordshield/pokemon/009.png',
    
     };
 const caterpie =
     {
-        '_id':'5cef3501ef6005a77cd4fd23',
-        'pokemon':'caterpie',
-        'id':14,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png',
+        
+        pokemon:'caterpie',
+        id:'9',
+        image:'https://www.serebii.net/swordshield/pokemon/010.png',
   
     };
 const metapod =
     {
-        '_id':'5cef3501ef6005a77cd4fd24',
-        'pokemon':'metapod',
-        'id':15,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png',
+        
+        pokemon:'metapod',
+        id:'10',
+        image:'https://www.serebii.net/swordshield/pokemon/011.png',
   
     };
 const beedrill =
     {
-        '_id':'5cef3501ef6005a77cd4fd25',
-        'pokemon':'beedrill',
-        'id':19,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png',
+        
+        pokemon:'beedrill',
+        id:'11',
+        image:'https://www.serebii.net/pokemongo/pokemon/015.png',
     };
 const weedle =
     {
-        '_id':'5cef3501ef6005a77cd4fd26',
-        'pokemon':'weedle',
-        'id':17,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png',
+        
+        pokemon:'weedle',
+        id:'12',
+        image:'https://www.serebii.net/pokemongo/pokemon/013.png',
     
     };
 const kakuna =
     {
-        '_id':'5cef3501ef6005a77cd4fd27',
-        'pokemon':'kakuna',
-        'id':18,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png',
+        
+        pokemon:'kakuna',
+        id:'13',
+        image:'https://www.serebii.net/pokemongo/pokemon/014.png',
     };
 const pidgey =
     {
-        '_id':'5cef3501ef6005a77cd4fd29',
-        'pokemon':'pidgey',
-        'id':21,
-        'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png',
+      
+        pokemon:'pidgey',
+        id:'14',
+        image:'https://www.serebii.net/sunmoon/pokemon/016.png',
     };
 
-export const pokemonArr = {
+export const pokemonArr = [
     bulbasaur,
     ivysaur,
     charmander,
@@ -121,4 +121,4 @@ export const pokemonArr = {
     weedle,
     pidgey,
     kakuna,
-};
+];
